@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vignale Gamine · chassis 1911571 (DH-30-93)</title>
+<style>
+  :root{
+    --navy:#16243f;
+    --navy-2:#20335a;
+    --red:#c8102e;
+    --paper:#f4efe4;
+    --card:#fbf8f0;
+    --ink:#1f2430;
+    --muted:#5c6270;
+    --line:#c9bfa6;
+    --rail:#b9c3d6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font:16px/1.6 "Georgia","Times New Roman",serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .sheet{
+    max-width:920px;
+    margin:0 auto;
+    padding:32px 22px 72px;
+  }
+
+  /* ---- kop ---- */
+  header.kop{
+    border-top:6px solid var(--red);
+    background:var(--navy);
+    color:#fff;
+    padding:26px 28px;
+    border-radius:2px;
+  }
+  header.kop .eyebrow{
+    font:600 12px/1.4 "Helvetica Neue",Arial,sans-serif;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#9fb2d4;
+    margin:0 0 8px;
+  }
+  header.kop h1{
+    margin:0;
+    font-size:30px;
+    line-height:1.15;
+    letter-spacing:.01em;
+  }
+  header.kop .sub{
+    margin:10px 0 0;
+    font-style:italic;
+    color:#d7deee;
+    font-size:17px;
+  }
+
+  /* ---- dossierkaart ---- */
+  .dossier{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:none;
+    padding:22px 26px 8px;
+  }
+  .dossier h2{
+    font:600 12px/1 "Helvetica Neue",Arial,sans-serif;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--red);
+    margin:4px 0 16px;
+  }
+  dl.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(215px,1fr));
+    gap:2px 26px;
+    margin:0;
+  }
+  dl.grid > div{
+    padding:9px 0;
+    border-bottom:1px dotted var(--line);
+  }
+  dl.grid dt{
+    font:600 11px/1.3 "Helvetica Neue",Arial,sans-serif;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:3px;
+  }
+  dl.grid dd{
+    margin:0;
+    font-size:16px;
+  }
+  .intro{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:none;
+    padding:18px 26px 22px;
+    color:#333;
+  }
+  .intro p{margin:.5em 0}
+  .intro strong{color:var(--navy)}
+
+  /* ---- tijdlijn / bolletjeslijn ---- */
+  .tl-head{
+    margin:38px 0 6px;
+    font:600 13px/1 "Helvetica Neue",Arial,sans-serif;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--navy);
+  }
+  .tl-span{
+    color:var(--muted);
+    font-style:italic;
+    margin:0 0 22px;
+    font-size:15px;
+  }
+  ol.timeline{
+    list-style:none;
+    margin:0;
+    padding:0 0 0 30px;
+    position:relative;
+  }
+  ol.timeline::before{
+    content:"";
+    position:absolute;
+    left:7px; top:8px; bottom:14px;
+    width:2px;
+    background:var(--rail);
+  }
+  ol.timeline > li{
+    position:relative;
+    padding:0 0 26px 22px;
+  }
+  ol.timeline > li::before{
+    content:"";
+    position:absolute;
+    left:-30px; top:5px;
+    width:16px; height:16px;
+    border-radius:50%;
+    background:var(--paper);
+    border:3px solid var(--navy-2);
+  }
+  ol.timeline > li.key::before{
+    background:var(--red);
+    border-color:var(--red);
+    box-shadow:0 0 0 4px rgba(200,16,46,.16);
+  }
+  ol.timeline > li.now::before{
+    background:var(--navy);
+    border-color:var(--navy);
+    box-shadow:0 0 0 4px rgba(22,36,63,.18);
+  }
+  .tl-date{
+    font:600 13px/1.3 "Helvetica Neue",Arial,sans-serif;
+    letter-spacing:.03em;
+    color:var(--red);
+    text-transform:uppercase;
+  }
+  li.now .tl-date{color:var(--navy)}
+  .tl-body{margin:3px 0 0}
+  .tl-body .src{
+    color:var(--muted);
+    font-size:13px;
+    font-style:italic;
+  }
+
+  /* ---- bronnen ---- */
+  .bronnen{
+    margin-top:40px;
+    padding:20px 24px;
+    background:var(--card);
+    border:1px solid var(--line);
+    font-size:14px;
+    color:#3a3f4c;
+  }
+  .bronnen h3{
+    font:600 12px/1 "Helvetica Neue",Arial,sans-serif;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--red);
+    margin:0 0 12px;
+  }
+  .bronnen ul{margin:0;padding-left:20px}
+  .bronnen li{margin:.35em 0}
+
+  footer.meta{
+    margin-top:26px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+    font-style:italic;
+  }
+
+  @media (max-width:560px){
+    header.kop h1{font-size:24px}
+    .sheet{padding:20px 14px 56px}
+    header.kop,.dossier,.intro{padding-left:18px;padding-right:18px}
+  }
+  @media print{
+    body{background:#fff}
+    .sheet{max-width:none}
+    ol.timeline > li{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="kop">
+    <p class="eyebrow">Vignale Gamine · historisch dossier</p>
+    <h1>Chassis 1911571 &nbsp;·&nbsp; DH-30-93</h1>
+    <p class="sub">&ldquo;The Flying Vignale&rdquo; &mdash; de Gamine die per vliegtuig thuiskwam</p>
+  </header>
+
+  <section class="dossier">
+    <h2>Gegevens uit de overzichtssheet &amp; RDW</h2>
+    <dl class="grid">
+      <div><dt>Registernummer</dt><dd>457</dd></div>
+      <div><dt>Chassisnummer</dt><dd>FIAT 110F 1911571</dd></div>
+      <div><dt>Kenteken</dt><dd>DH-30-93</dd></div>
+      <div><dt>Kleur</dt><dd>Turquoise <span style="color:var(--muted)">(RDW-registratie: blauw)</span></dd></div>
+      <div><dt>Stuur</dt><dd>Rechts (RHD)</dd></div>
+      <div><dt>Land</dt><dd>Nederland</dd></div>
+      <div><dt>Laatst bekende eigenaar</dt><dd>Martin W</dd></div>
+      <div><dt>Motornummer</dt><dd>110F0002019844</dd></div>
+      <div><dt>Eerste toelating</dt><dd>30-06-1968 <span style="color:var(--muted)">(dag/maand = RDW-plaatshouder)</span></dd></div>
+      <div><dt>Eerste tenaamstelling NL</dt><dd>19-11-1992</dd></div>
+      <div><dt>Tenaamstelling (RDW)</dt><dd>27-12-2017</dd></div>
+      <div><dt>Massa</dt><dd>482 kg leeg &middot; 582 kg rijklaar</dd></div>
+      <div><dt>Motor</dt><dd>2 cilinders, benzine, ~21 pk</dd></div>
+      <div><dt>Verzekerd (RDW, 29-08-2026)</dt><dd>Ja &middot; APK-vrij (50+)</dd></div>
+      <div><dt>Rijdt waarschijnlijk nog</dt><dd>Ja &middot; laatste tellerstand 2020</dd></div>
+      <div><dt>Foto&rsquo;s in register</dt><dd>38 (34 beoordeeld, betrouwbaarheid hoog)</dd></div>
+    </dl>
+  </section>
+
+  <section class="intro">
+    <p>Van alle ruim 830 Gamines in de overzichtssheet is dit de auto met de meeste
+    vastgelegde geschiedenis. Naast de complete registerregel en openbare
+    RDW-gegevens zijn er <strong>twee uitgebreide ooggetuigenverslagen</strong> op
+    vignalegamine.net: <em>The Flying Vignale</em> (de aankoop in Sydney en het
+    transport per vliegtuig, 1991&ndash;1994) en <em>Route des Vosges</em> (de rally
+    in de Franse Vogezen, 1997). De tijdlijn hieronder loopt van de eerste toelating
+    in 1968 tot vandaag.</p>
+  </section>
+
+  <h2 class="tl-head">Tijdlijn</h2>
+  <p class="tl-span">Van eerste toelating (30 juni 1968) tot vandaag (31 augustus 2026) &mdash; 58 jaar.</p>
+
+  <ol class="timeline">
+    <li>
+      <div class="tl-date">30 juni 1968</div>
+      <p class="tl-body">Eerste toelating. De Gamine is een rechtsgestuurde uitvoering
+      en wordt oorspronkelijk in Engeland verkocht. Het jaartal 1968 staat vast; dag
+      en maand zijn een RDW-plaatshouder omdat die bij invoer niet bekend waren.
+      <span class="src">Bron: RDW open data; overzichtssheet</span></p>
+    </li>
+    <li>
+      <div class="tl-date">Jaren 70 / 80</div>
+      <p class="tl-body">Een eerdere eigenaar brengt de auto vanuit Engeland naar
+      Australi&euml;. Daar koopt Carole Grace hem, wonend in Huntershill, een van de
+      mooiere wijken van Sydney.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li>
+      <div class="tl-date">1987</div>
+      <p class="tl-body">Laatste keuring en verzekering in Australi&euml;. Kort daarna
+      wil de motor niet meer starten en blijft de auto onder een dekzeil op de oprit
+      bij het zwembad staan.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">Augustus 1992</div>
+      <p class="tl-body">Martin, dan student en op reis door Australi&euml;, ziet het
+      autootje onder het dekzeil staan als hij een collega naar Huntershill brengt.
+      Hij hoort dat het al zes jaar niet heeft gereden en wordt op slag verliefd.
+      Carole Grace blijkt eerder tevergeefs een koper te hebben gezocht.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">September 1992</div>
+      <p class="tl-body">Martin koopt de Gamine. Met een geleende accu en wat schuurwerk
+      aan de contactpunten draait de motor kort op eigen kracht. Een vastzittende rem
+      wordt losgeklopt zodat de auto kan rollen.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">21 september 1992</div>
+      <p class="tl-body">In plaats van een zeecontainer (A$1.580 plus havenkosten) gaat
+      de Gamine per Qantas de lucht in: A$2.625 all-in, en dankzij ~59 dagen kortere
+      transitduur ook flink goedkopere verzekering. H.M. Towing Service brengt de auto
+      voor A$85 naar het Nippon Express-magazijn. &ldquo;The Flying Vignale.&rdquo;
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li>
+      <div class="tl-date">23 september 1992</div>
+      <p class="tl-body">Aankomst op Schiphol; Nippon Express belt met het nieuws.
+      Invoer kan niet via Schiphol, alleen via onder meer Amsterdam en Rotterdam.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li>
+      <div class="tl-date">Eind september 1992</div>
+      <p class="tl-body">Inklaring bij de douane aan de Westzeedijk in Rotterdam, waar
+      de naam Vignale Gamine volslagen onbekend is. Borgsom via KLM Cargo, transport
+      per autoambulance (Wolders, Rotterdam) naar Vlaardingen. Totale invoerheffing
+      bijna &fnof; 1.500, inclusief 90% leeftijdskorting op de B.V.B. Bij een molen in
+      Vlaardingen wordt een foto gemaakt &mdash; een verkoopvoorwaarde van de vorige
+      eigenares.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li>
+      <div class="tl-date">Oktober 1992</div>
+      <p class="tl-body">Remsysteem en koplampreflectoren vernieuwd via Auto Europa
+      Italia. De oude reflectoren waren gericht op links rijden (Australi&euml; /
+      Engeland).
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li>
+      <div class="tl-date">3 november 1992</div>
+      <p class="tl-body">Met een eendagskenteken en een weegbriefje van 482 kg zakt de
+      auto voor de RDW-keuring op 8 punten.
+      <span class="src">Bron: The Flying Vignale; RDW (massa 482 kg)</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">9 november 1992</div>
+      <p class="tl-body">Zes dagen later opnieuw voorgereden en geslaagd. De keurmeester
+      vraagt eerst of Martin echt denkt hiervoor een kenteken te krijgen, maar wordt
+      enthousiast als blijkt dat het geen zelfbouw is maar een echte Vignale Gamine.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">19 november 1992</div>
+      <p class="tl-body">Eerste tenaamstelling in Nederland. De Gamine krijgt kenteken
+      <strong>DH-30-93</strong>. Op het kentekenbewijs staat aanvankelijk nog dat het
+      voertuig deels uit gebruikte onderdelen is opgebouwd &mdash; een verwisseling van
+      codes, later gecorrigeerd.
+      <span class="src">Bron: RDW open data; The Flying Vignale</span></p>
+    </li>
+    <li>
+      <div class="tl-date">Circa 1994</div>
+      <p class="tl-body">De auto rijdt ruim een jaar op DH-30-93. Ritjes met Yvon naar
+      het strand voor een zonsondergang, Chianti en pizza. Het oorspronkelijke plan om
+      een Australische auto met winst in Nederland te verkopen, gaat definitief niet
+      door.
+      <span class="src">Bron: The Flying Vignale</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">1997</div>
+      <p class="tl-body">Deelname aan de Route des Vosges in Frankrijk: 530 km heen.
+      De Gamine is met afstand de kleinste en traagste auto van het veld (18 pk, tegen
+      Jaguars, Porsches en MG&rsquo;s). De verplichte stickers passen amper op de
+      25 cm hoge portieren en gaan uiteindelijk op de achterspatborden. 3e plaats in
+      de verkiezing &ldquo;meest begeerlijke auto&rdquo; en een grote trofee voor
+      &ldquo;l&rsquo;&eacute;quipe le plus sympathique&rdquo;.
+      <span class="src">Bron: Route des Vosges</span></p>
+    </li>
+    <li class="key">
+      <div class="tl-date">2017</div>
+      <p class="tl-body">&ldquo;Nut/bolt&rdquo;-restauratie. Soda-gestraald, gelast,
+      gespoten in z&rsquo;n originele kleur &ldquo;Hollywood verde&rdquo;.</p>
+    </li>
+    <li>
+      <div class="tl-date">27 december 2017</div>
+      <p class="tl-body">Datum van de huidige tenaamstelling in het RDW-register.
+      <span class="src">Bron: RDW open data</span></p>
+    </li>
+    <li>
+      <div class="tl-date">2020</div>
+      <p class="tl-body">Laatst geregistreerde tellerstand bij het RDW.
+      <span class="src">Bron: RDW open data</span></p>
+    </li>
+    <li>
+      <div class="tl-date">29 augustus 2026</div>
+      <p class="tl-body">Registratiecheck: WAM-verzekerd, APK-vrij wegens de
+      50-plus-regeling. De auto rijdt naar alle waarschijnlijkheid nog.
+      <span class="src">Bron: RDW open data</span></p>
+    </li>
+    <li class="now">
+      <div class="tl-date">31 augustus 2026 &mdash; vandaag</div>
+      <p class="tl-body">Nog altijd in Nederland, laatst bekende eigenaar Martin W.
+      Turquoise, rechtsgestuurd, chassis 1911571. In het wereldwijde register staan
+      38 foto&rsquo;s van deze auto.
+      <span class="src">Bron: overzichtssheet</span></p>
+    </li>
+  </ol>
+
+  <div class="bronnen">
+    <h3>Bronnen</h3>
+    <ul>
+      <li><em>The Flying Vignale</em> &mdash; ooggetuigenverslag van Martin (Sydney &rarr; Nederland, 1991&ndash;1994), vignalegamine.net / Stories.</li>
+      <li><em>Route des Vosges</em> &mdash; rallyverslag 1997, vignalegamine.net / Stories.</li>
+      <li>Overzichtssheet &ldquo;Vignale Gamine &mdash; alle Gamines&rdquo;, tab &ldquo;Alle Gamines&rdquo;, rij 457 (snapshot 30-08-2026).</li>
+      <li>RDW open data, gekentekende voertuigen (<code>m9d7-ebf2</code> / <code>8ys7-d773</code>), kenteken DH-30-93, geraadpleegd 31-08-2026.</li>
+    </ul>
+  </div>
+
+  <footer class="meta">Samengesteld op 31 augustus 2026 &middot; projecten/Vignale-Gamine</footer>
+
+</div>
+</body>
+</html>
