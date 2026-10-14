@@ -14,9 +14,9 @@ Opgezet 2026-08-31 op verzoek van Frank, om met Martin te delen.
 
 ## Inhoud
 
-- `<chassis>.html` - 21 dossiers voor de auto's met echte veiling-/herkomsthistorie
+- `<chassis>.html` - 22 dossiers voor de auto's met echte veiling-/herkomsthistorie
   (uit de webresearch van 31-08-2026), plus `1911571.html` ("The Flying Vignale").
-- De 20 worden gegenereerd door `bouw_dossiers.py`; `1911571.html` heeft een eigen
+- De 21 worden gegenereerd door `bouw_dossiers.py`; `1911571.html` heeft een eigen
   ontwerp (navy/Georgia) en een eigen builder `bouw_1911571.py`.
 - **6-talig** (EN/NL/IT/ES/FR/DE), zelfde taal-switch als vignalegamine.net:
   `<select id="langSwitch">` + `localStorage['gamineLang']`, standaardtaal EN. De
@@ -66,7 +66,7 @@ Pages herbouwt automatisch (~1 min).
 
 ## Link vanuit de overzichtssheet
 
-Tab "Alle Gamines", kolom B (VIN): op de 21 dossierauto's is een rich-text
+Tab "Alle Gamines", kolom B (VIN): op de 22 dossierauto's is een rich-text
 hyperlink op de chassisnummer-tekst gezet naar
 `https://mixe66.github.io/vg-636d5603/<chassis>.html`. Geen aparte kolom, geen
 `=HYPERLINK`-formule (de cel-waarde blijft de kale string, zodat Martins
